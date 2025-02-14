@@ -38,8 +38,23 @@ if length_ok:
 else:
     print("- Insufficient length (less than 8 characters)")
 
-# Check overall password strength
-if all([has_number, has_lowercase, has_uppercase, has_symbol, length_ok]):
-    print("\nYour password is strong!")
+
+# Improved feedback section
+feedback = []
+if not has_number:
+    feedback.append("- Missing numbers")
+if not has_lowercase:
+    feedback.append("- Missing lowercase letters")
+if not has_uppercase:
+    feedback.append("- Missing uppercase letters")
+if not has_symbol:
+    feedback.append("- Missing symbols")
+if not length_ok:
+    feedback.append("- Insufficient length (less than 8 characters)")
+
+if feedback:
+    print("\nYour password could be stronger. It needs:")
+    for message in feedback:
+        print(message)
 else:
-    print("\nYour password could be stronger. Consider including all character types and ensuring a length of at least 8 characters.")
+    print("\nYour password is strong!")
