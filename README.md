@@ -4,13 +4,9 @@ This Python script evaluates the strength of a user-provided password based on v
 - A **minimum length of 8 characters**.
 
 ## Features
-
-*   Checks for the presence of numbers, lowercase letters, uppercase letters, and symbols.
-*   Verifies if the password meets the minimum length requirement (8 characters).
-*   Provides a summary of the password's characteristics (e.g., presence of numbers, letters, etc.).
-*   Gives overall feedback on password strength.
-*   Identifies missing components in your password.
-*   User-friendly and easy-to-use.
+- Identifies missing components in your password.
+- Provides feedback to help improve password strength.
+- User-friendly and easy-to-use.
 
 ## How It Works
 1. The script prompts the user to enter a password.
@@ -27,43 +23,31 @@ This Python script evaluates the strength of a user-provided password based on v
 
 ## Usage
 1. Clone or download this script.
-```
-git clone https://github.com/kissssu/Password-Strength-Checker.git
-cd Password-Strength-Checker
-```
 2. Run the script using Python:
 ```bash
 python3 password_checker.py
 ```
+3. Enter your password when prompted.
 
-## Sample Output
+## Example
+
 #### Input:
+```
+Enter your password: Hello123
+```
 
+#### Output:
 ```
 Hello Ji.
-Enter your password: Enter_your_password_herr.
 
 Your password has:
+- Numbers
 - Lowercase letters
 - Uppercase letters
-- Symbols
-- Sufficient length (8 characters or more)
+- Insufficient length (less than 8 characters)
 
-Your password could be stronger. It needs:
-- Missing numbers
+Your password could be stronger. Consider including all character types and ensuring a length of at least 8 characters.
 ```
-
-## Updates
-
-*   **Improved Feedback:** The script now provides more specific feedback about what criteria a password fails to meet (e.g., "Missing numbers," "Password too short"). This helps users create stronger passwords by giving them actionable information.
-
-## Upcoming Updates
-
-*   **Common Password Check:**  Will check the password against a list of commonly used passwords or known breaches to prevent users from choosing easily guessable passwords.
-*   **Symbol Definition:**  Will define a specific set of allowed symbols (e.g., punctuation marks, special characters) instead of flagging any non-alphanumeric character as a symbol. This will improve the accuracy of the symbol check.
-*   **Character Type Combinations:** Will add a check for a minimum number of distinct character types present (e.g., at least 3 out of 4: numbers, lowercase, uppercase, symbols).  This encourages users to create passwords with a good mix of character types.
-*   **Password History Check:** Will implement a check to see if the user has used the password before, preventing simple password rotation.
-*   **Regular Expression Implementation:** Will explore using regular expressions to make the character checks more concise and readable.
 
 ## Security Notes
 - This script is for educational purposes only.
@@ -72,3 +56,4 @@ Your password could be stronger. It needs:
 
 ## License
 This project is provided under the MIT License.
+
