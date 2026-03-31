@@ -13,6 +13,11 @@ This Python tool provides a high-level security analysis of user passwords. Unli
 ## How It Works
 1. Input: The script securely prompts for a password (text is invisible).
 2. Analysis: It evaluates:
+- **Numbers**: Does the password contain digits (e.g., 123)?
+- **Lowercase** letters: Does the password include lowercase characters (e.g., a-z)?
+- **Uppercase** letters: Does the password include uppercase characters (e.g., A-Z)?
+- **Symbols**: Does the password include special characters (e.g., @, #, $)?
+- **Length**: Is the password at least 8 characters long?
 - **Character Pools**: Checks for Numbers, Lowercase, Uppercase, and Symbols.
 - **Entropy**: Measures the "randomness" (50+ bits is generally considered professional-grade).
 - **Logic Checks**: Scans for sequences and length (minimum 8 characters).
